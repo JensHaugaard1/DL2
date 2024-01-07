@@ -56,7 +56,7 @@ function init() {
 
 //Load the file
 loader.load(
-  `models/DL.gltf`,
+  `models/DL2.gltf`,
  
   function (gltf) {
     progressBar.style.display = 'none'
@@ -86,19 +86,19 @@ camera.position.set(0,0,20); // Set position like this
 camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xffffff , 1); // (color, intensity)
-topLight.position.set(500, 1000, 750) //top-left-ish
+const topLight = new THREE.DirectionalLight(0xffffff , 3); // (color, intensity)
+topLight.position.set(500, 500, 500) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-const topLight2 = new THREE.DirectionalLight(0x404040, 2); // (color, intensity)
-topLight2.position.set(2000, 1000, -2000) //top-left-ish
+const topLight2 = new THREE.DirectionalLight(0x404040, 7); // (color, intensity)
+topLight2.position.set(-1000, -200, 500) //top-left-ish
 topLight2.castShadow = true;
 scene.add(topLight2);
 
 
 
-const light = new THREE.AmbientLight( 0x404040, 15 ); // soft white light
+const light = new THREE.AmbientLight( 0x404040, 8 ); // soft white light
 light.castShadow = true;
 scene.add( light );
 
